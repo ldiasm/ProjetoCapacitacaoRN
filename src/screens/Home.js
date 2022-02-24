@@ -79,7 +79,6 @@ const DATA = [
   },
 ];
 
-
 export default class Home extends React.Component {
 
   constructor(props) {
@@ -95,7 +94,6 @@ export default class Home extends React.Component {
 
   loadData = () => {
     api.get().then(result => {
-      console.log("#####RESULT: ", this.state.gotData)
       this.setState({
         gotData: result.data
       })

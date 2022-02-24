@@ -6,11 +6,16 @@ export default class FancyFlatlist extends React.Component {
     super(props);
   }
 
+  goTo = (url) => {
+    console.log("Cliquei em: ", url)
+    this.props.navigation.navigate("Profile", {screen: "Profile", character: url})
+  }
 
-  renderItem = ({ item }, navigation) => {
+
+  renderItem = ({ item }) => {
     return (
       <View style={styles.listItem}>
-        <TouchableOpacity onPress={() => navigation.navigate("Profile", {screen: "Profile"})} >
+        <TouchableOpacity onPress={() => this.goTo(item.url)} >
           {/* <View style={styles.imageView}>
                     <ImageBackground style={styles.backgroundImage}
                         source={{ uri: item.url }} />

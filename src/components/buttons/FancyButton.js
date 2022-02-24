@@ -1,18 +1,19 @@
 import * as React from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import FancyButtonText from './FancyButtonText';
+import * as Animatable from 'react-native-animatable';
 
 class FancyButton extends React.Component {
   render() {
     const { title, screen, navigation } = this.props;
     return (
-      <View style={styles.mainTheme}>
+      <Animatable.View animation="rubberBand" style={styles.mainTheme}>
         <TouchableOpacity
           style={styles.touchArea}
           onPress={() => navigation.navigate(screen, {screen: screen})}>
           <FancyButtonText title={title}/>
         </TouchableOpacity>
-      </View>
+      </Animatable.View>
     )
   }
 }
