@@ -84,16 +84,23 @@ export default class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      gotData: []
+      gotData: [],
+      randomNumber: Math.floor(Math.random() * 44),
     }
+    
   }
 
   componentDidMount = () => {
     this.loadData();
+    console.log("#####Generated Number: ", this.state.randomNumber)
   }
 
   loadData = () => {
-    api.get().then(result => {
+    const params = {
+      page: this.state.randomNumber,
+      pageSize: 50
+    }
+    api.get("?page="+params.page+"&pageSize="+params.pageSize).then(result => {
       this.setState({
         gotData: result.data
       })
