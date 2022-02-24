@@ -8,7 +8,7 @@ const Profile = ({ navigation }) => {
       <Text>
         {`Hello Profile!`}
       </Text>
-      <FancyButton title="Home" navigation={navigation}/>
+      <FancyButton title="Home" screen="Home" navigation={navigation}/>
     </View>
   )
 }

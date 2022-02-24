@@ -1,15 +1,15 @@
 import * as React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import FancyButtonText from './FancyButtonText';
 
 class FancyButton extends React.Component {
   render() {
-    const { title, navigation } = this.props;
+    const { title, screen, navigation } = this.props;
     return (
       <View style={styles.mainTheme}>
-        <TouchableOpacity 
+        <TouchableOpacity
           style={styles.touchArea}
-          onPress={() => navigation.navigate(title, {screen: title})}>
+          onPress={() => navigation.navigate(screen, {screen: screen})}>
           <FancyButtonText title={title}/>
         </TouchableOpacity>
       </View>
@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
+    marginVertical: 16,
   },
   touchArea: {
     height: 40,
