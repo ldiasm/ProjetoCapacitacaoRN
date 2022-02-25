@@ -19,10 +19,12 @@ const MyStack = () => {
         <Stack.Screen
           name="Home"
           component={Home}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="Profile"
           component={Profile}
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>

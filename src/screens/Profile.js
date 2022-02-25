@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
 import FancyButton from '../components/buttons/FancyButton';
+import DetailedCharacter from '../components/DetailedCharacter';
 import api from '../services/API';
 
 export default class Profile extends React.Component {
@@ -27,9 +28,7 @@ export default class Profile extends React.Component {
   render() {
     return (
       <View>
-        <Text>
-          {`${this.state.selectedCharacter.aliases}`}
-        </Text>
+        <DetailedCharacter data={this.state.selectedCharacter}/>
         <FancyButton title="Home" screen="Home" navigation={this.props.navigation} />
       </View>
     )

@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    marginVertical: 16,
+    marginVertical: 4,
   },
   touchArea: {
     height: 40,

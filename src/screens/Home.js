@@ -87,7 +87,6 @@ export default class Home extends React.Component {
       gotData: [],
       randomNumber: Math.floor(Math.random() * 44),
     }
-    
   }
 
   componentDidMount = () => {
@@ -115,7 +114,7 @@ export default class Home extends React.Component {
           <FancyFlatlist data={this.state.gotData} navigation={this.props.navigation} />
         </View>
         <View style={styles.buttonView}>
-          <FancyButton title="Profile" screen="Profile" navigation={this.props.navigation} />
+          <FancyButton title="Login" screen="Login" navigation={this.props.navigation} />
         </View>
       </View>
     )

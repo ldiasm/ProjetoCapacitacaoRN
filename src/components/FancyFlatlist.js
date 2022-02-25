@@ -41,7 +41,7 @@ export default class FancyFlatlist extends React.Component {
     return (
       <FlatList
         data={data}
-        renderItem={item => this.renderItem(item, this.props.navigation)} >
+        renderItem={item => this.renderItem(item)} >
       </FlatList>
     )
   }
